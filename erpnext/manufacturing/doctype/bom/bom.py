@@ -197,7 +197,7 @@ class BOM(WebsiteGenerator):
 			truncated_item_name = self.item[:truncated_length]
 			# if a partial word is found after truncate, remove the extra characters
 			truncated_item_name = truncated_item_name.rsplit(" ", 1)[0]
-			name = f"{prefix}-{truncated_item_name}-{suffix}"
+			name = f"2024_{prefix}-{truncated_item_name}-{suffix}"
 
 		if frappe.db.exists("BOM", name):
 			conflicting_bom = frappe.get_doc("BOM", name)
